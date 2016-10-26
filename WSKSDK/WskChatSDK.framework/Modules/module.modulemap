@@ -1,0 +1,6 @@
+framework module WskChatSDK {
+  umbrella header "WskChatSDK.h"
+
+  export *
+  module * { export * }
+}

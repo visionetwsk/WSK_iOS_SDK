@@ -269,7 +269,7 @@ WSKUIConfig 只是负责替换部分皮肤相关内容，不包含所有的图�
 ```
 
 ### APNS推送
-* [制作推送证书并在管理后台配置](https://raw.githubusercontent.com/visionetwsk/Resource/master/doc/iOS%20%E8%AF%81%E4%B9%A6%20%E8%AE%BE%E7%BD%AE%E6%8C%87%E5%8D%97.md)
+* [制作推送证书并在管理后台配置](https://github.com/visionetwsk/WSK_iOS_SDK/wiki/iOS-证书-设置指南)
 * Capabilities
 如使用Xcode8及以上环境开发，请开启Application Target的Capabilities->Push Notifications选项，如图：
 jpush_ios

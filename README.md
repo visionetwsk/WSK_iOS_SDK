@@ -11,11 +11,11 @@
  
  >由于 SDK 是静态库，且为了方便开发者使用，我们将 i386 x86_64 armv7 arm64 平台的静态库合并成一个 Fat Library ，导致整个 SDK 比较大。但实际编译后大约只会增加 app 2-3M 大小
 
-## 系统要求以及依赖框架
+## 系统要求以及依赖第三方框架
 * 系统要求  
 该项目最低支持 iOS 8.0 和 Xcode 8.0。
 
-* 依赖框架  
+* 依赖第三方框架  
 微上客SDK 依赖 [Socket.IO-Client-Swift](https://github.com/socketio/socket.io-client-swift) 库，如果选择手动集成微上客SDK则需要用CocoaPods引入Socket.IO库，选择CocoaPods集成则不需要手动添加依赖处理。
 
 ## SDK 集成和配置
@@ -26,15 +26,13 @@
 * 添加 微上客 SDK 依赖库
 
 	* UIKit.framework
-	* CoreText.framework
 	* MobileCoreService.framework
 	* SystemConfiguration.framework
 	* AVFoundation.framwork
-	* CoreTelephony.framework
-	* CoreMedia.framework
-	* AudioToolbox.framework
+	* CoreGraphics.framework
+	* ImageIO.framework
+	* CoreFoundation.framework
 	* UserNotifications.framework
-	* libz.tbd
 	* libstdc++.6.0.9.tbd
 
 * 添加第三方库：在Podfile中添加Socket.IO的依赖， pod 'Socket.IO-Client-Swift', '~> 8.0.2'
@@ -63,9 +61,19 @@
 	</dict>
 ```
 
+* iOS10 权限设置  
 
+ ```
+	<key>NSCameraUsageDescription</key>
+	<string>App需要您的同意,才能访问相机</string>  
+	<key>NSMicrophoneUsageDescription</key>  
+	<string>App需要您的同意,才能访问麦克风</string>  
+	<key>NSPhotoLibraryUsageDescription</key>  
+	<string>App需要您的同意,才能访问相册</string>
+```
 
-* SDK 不支持 bitcode，向 Build Settings → Linking → Enable Bitcode 中设置 NO。
+* SDK 不支持 bitcode  
+向 Build Settings → Linking → Enable Bitcode 中设置 NO。
 
 
 ## 使用详解
@@ -261,7 +269,7 @@ WSKUIConfig 只是负责替换部分皮肤相关内容，不包含所有的图�
 ```
 
 ### APNS推送
-* [制作推送证书并在管理后台配置](./iOS_apns.html "target=_blank")
+* [制作推送证书并在管理后台配置](https://raw.githubusercontent.com/visionetwsk/Resource/master/doc/iOS%20%E8%AF%81%E4%B9%A6%20%E8%AE%BE%E7%BD%AE%E6%8C%87%E5%8D%97.md)
 * Capabilities
 如使用Xcode8及以上环境开发，请开启Application Target的Capabilities->Push Notifications选项，如图：
 jpush_ios

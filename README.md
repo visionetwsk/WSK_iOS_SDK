@@ -9,16 +9,16 @@
  * WSKChatSDK.framework：静态库Framework,包含静态库文件和SDK的头文件
  * WSKResource.bundle：SDK的资源文件包
  
- **由于 SDK 是静态库，且为了方便开发者使用，我们将 i386 x86_64 armv7 arm64 平台的静态库合并成一个 Fat Library ，导致整个 SDK 比较大。但实际编译后大约只会增加 app 2-3M 大小**
+ >由于 SDK 是静态库，且为了方便开发者使用，我们将 i386 x86_64 armv7 arm64 平台的静态库合并成一个 Fat Library ，导致整个 SDK 比较大。但实际编译后大约只会增加 app 2-3M 大小
 
-## 依赖哪些第三方框架
- 
-* [Socket.IO-Client-Swift](https://github.com/socketio/socket.io-client-swift)：基于 WebSocket 的通信库（如果选择手动集成需要使用CocoaPods引入，选择CocoaPods集成则不需要引入）。
-
-## 系统要求
+## 系统要求以及依赖框架
+* 系统要求  
 该项目最低支持 iOS 8.0 和 Xcode 8.0。
 
-## 前期准备
+* 依赖框架  
+微上客SDK 依赖 [Socket.IO-Client-Swift](https://github.com/socketio/socket.io-client-swift) 库，如果选择手动集成微上客SDK则需要用CocoaPods引入Socket.IO库，选择CocoaPods集成则不需要手动添加依赖处理。
+
+## SDK 集成和配置
 
 ### 手动集成
 
@@ -33,6 +33,7 @@
 	* CoreTelephony.framework
 	* CoreMedia.framework
 	* AudioToolbox.framework
+	* UserNotifications.framework
 	* libz.tbd
 	* libstdc++.6.0.9.tbd
 
@@ -49,10 +50,9 @@
 ```
 > 推荐使用CocoaPods集成，因为只需在Podfile中加入上面一句即可
 
-### 其他
+### 配置工程
 
-*  允许持Http传输方法，由于SDK与服务器之间有部分请求使用的是http。
-  
+*  允许App支持Http传输方法，由于SDK与服务器之间有部分请求使用的是http。  
   在Info.plist中加入以下内容：
 
 ```
@@ -74,7 +74,7 @@
 
 * 在需要使用 SDK 的地方 #import \<WskChatSDK/WskChatSDK.h>。WSKSDK 类是整个SDK的唯一主入口，是一个单例。各个函数简介：
  
-```
+```objc
 	初始化：
 		- (void)registerAppKey:(NSString *)appKey appName:(NSString *)appName;
 		
@@ -262,6 +262,11 @@ WSKUIConfig 只是负责替换部分皮肤相关内容，不包含所有的图�
 
 ### APNS推送
 * [制作推送证书并在管理后台配置](./iOS_apns.html "target=_blank")
+* Capabilities
+如使用Xcode8及以上环境开发，请开启Application Target的Capabilities->Push Notifications选项，如图：
+jpush_ios
+
+
 * 初始化
 
 ```objc

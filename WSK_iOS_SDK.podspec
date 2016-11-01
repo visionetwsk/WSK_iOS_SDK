@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   s.resource  = ['WSKSDK/WSKResource.bundle']
   s.vendored_frameworks = 'WSKSDK/*.{framework}'
   
-  s.framework = 'UIKit','CoreText','MobileCoreServices','SystemConfiguration','AVFoundation','CoreTelephony','CoreMedia','AudioToolbox'
-  s.libraries = 'z','stdc++.6.0.9'
+  s.framework = 'UIKit','MobileCoreServices','SystemConfiguration','AVFoundation','CoreGraphics','ImageIO','CoreFoundation','UserNotifications'
+  s.libraries = 'stdc++.6.0.9'
 
   s.requires_arc = true
   s.dependency 'Socket.IO-Client-Swift', '~> 8.0.2'

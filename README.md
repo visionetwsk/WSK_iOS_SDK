@@ -272,7 +272,7 @@ WSKUIConfig 只是负责替换部分皮肤相关内容，不包含所有的图�
   
 * Capabilities
 如使用Xcode8及以上环境开发，请开启Application Target的Capabilities->Push Notifications选项，如图：  
-![](https://raw.githubusercontent.com/visionetwsk/Resource/master/image/capabilities_intro.png)
+![WSK_SDK_iOS](https://raw.githubusercontent.com/visionetwsk/Resource/master/image/capabilities_intro.png)
 
 
 * 初始化

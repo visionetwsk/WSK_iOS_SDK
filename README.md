@@ -50,8 +50,7 @@
 
 ### 配置工程
 
-*  允许App支持Http传输方法，由于SDK与服务器之间有部分请求使用的是http。  
-  在Info.plist中加入以下内容：
+*  允许App支持Http传输方法，由于SDK与服务器之间有部分请求使用的是http。在Info.plist中加入以下内容：
 
 ```
 	<key>NSAppTransportSecurity</key>
@@ -61,7 +60,7 @@
 	</dict>
 ```
 
-* iOS10 权限设置  
+* iOS10 权限设置,在Info.plist中加入以下内容：  
 
  ```
 	<key>NSCameraUsageDescription</key>
@@ -270,9 +269,10 @@ WSKUIConfig 只是负责替换部分皮肤相关内容，不包含所有的图�
 
 ### APNS推送
 * [制作推送证书并在管理后台配置](https://github.com/visionetwsk/WSK_iOS_SDK/wiki/iOS-证书-设置指南)
+  
 * Capabilities
-如使用Xcode8及以上环境开发，请开启Application Target的Capabilities->Push Notifications选项，如图：
-jpush_ios
+如使用Xcode8及以上环境开发，请开启Application Target的Capabilities->Push Notifications选项，如图：  
+![](https://raw.githubusercontent.com/visionetwsk/Resource/master/image/capabilities_intro.png)
 
 
 * 初始化

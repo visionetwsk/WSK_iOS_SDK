@@ -1,6 +1,6 @@
 //
 //  WSKUIConfig.h
-//  WskChatSDK
+//  WSKChatSDK
 //
 //  Created by 焱 孙 on 16/9/13.
 //  Copyright © 2016年 焱 孙. All rights reserved.
@@ -19,7 +19,7 @@
 - (void)resetUIConfig;
 
 /**
- *  访客文本消息字体颜色
+ *  客户文本消息字体颜色
  */
 @property (nonatomic, strong) UIColor *customMessageTextColor;
 
@@ -29,19 +29,19 @@
 @property (nonatomic, strong) UIColor *serviceMessageTextColor;
 
 /**
- *  文本消息字体大小
+ *  客户文本消息内嵌链接字体颜色
  */
-@property (nonatomic, assign) CGFloat messageTextFontSize;
+@property (nonatomic, strong) UIColor *customMessageLinkTextColor;
+
+/**
+ *  客服文本消息内嵌链接字体颜色
+ */
+@property (nonatomic, strong) UIColor *serviceMessageLinkTextColor;
 
 /**
  *  提示文本消息字体颜色
  */
 @property (nonatomic, strong) UIColor *tipMessageTextColor;
-
-/**
- *  提示文本消息字体大小
- */
-@property (nonatomic, assign) CGFloat tipMessageTextFontSize;
 
 /**
  *  提示文本消息背景颜色
@@ -54,27 +54,22 @@
 @property (nonatomic, strong) UIColor *inputTextColor;
 
 /**
- *  输入框文本消息字体大小
+ *  消息时间颜色
  */
-@property (nonatomic, assign) CGFloat inputTextFontSize;
+@property (nonatomic, strong) UIColor *messageTimeColor;
 
 /**
  *  消息tableview的背景图片
  */
-@property (nonatomic, strong) UIImageView *sessionBackground;
+@property (nonatomic, strong) UIImageView *chatBackground;
 
 /**
- *  访客头像
+ *  客户头像
  */
 @property (nonatomic, strong) UIImage *customerHeadImage;
 
 /**
- *  客服头像
- */
-@property (nonatomic, strong) UIImage *serviceHeadImage;
-
-/**
- *  访客消息气泡normal图片
+ *  客户消息气泡normal图片
  */
 @property (nonatomic, strong) UIImage *customerMessageBubbleNormalImage;
 
@@ -84,7 +79,7 @@
 @property (nonatomic, strong) UIImage *serviceMessageBubbleNormalImage;
 
 /**
- *  访客消息气泡pressed图片
+ *  客户消息气泡pressed图片
  */
 @property (nonatomic, strong) UIImage *customerMessageBubblePressedImage;
 
@@ -92,11 +87,6 @@
  *  客服消息气泡pressed图片
  */
 @property (nonatomic, strong) UIImage *serviceMessageBubblePressedImage;
-
-/**
- *  消息竖直方向间距
- */
-@property (nonatomic, assign) CGFloat sessionMessageSpacing;
 
 /**
  *  默认是YES,默认进入聊天界面，是文本输入模式的话，会弹出键盘，设置为NO，可以修改为不弹出

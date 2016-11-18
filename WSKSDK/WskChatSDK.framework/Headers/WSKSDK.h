@@ -1,13 +1,15 @@
 //
 //  WSKSDK.h
-//  WskChatSDK
+//  WSKChatSDK
 //
 //  Created by 焱 孙 on 16/7/28.
 //  Copyright © 2016年 焱 孙. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "WSKHeaders.h"
+#import "WSKChatViewController.h"
+#import "WSKUserVo.h"
+#import "WSKUIConfig.h"
 
 /**
  *  完成回调
@@ -35,7 +37,7 @@ typedef void(^WSKCompletionBlock)();
 - (void)registerAppKey:(NSString *)appKey appName:(NSString *)appName;
 
 /**
- *  返回客服聊天ViewController，必须嵌入到UINavigationController中，全局只能有一个 WSKChatViewController 实例
+ *  返回客服聊天ViewController，必须嵌入到UINavigationController中
  *
  *  @return 会话ViewController
  */

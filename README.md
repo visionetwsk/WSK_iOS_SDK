@@ -1,7 +1,7 @@
 # 微企微上客 iOS SDK 开发指南
 ## 简介
 
-微企微上客 iOS SDK 是客服系统访客端的解决方案，既包含了客服聊天逻辑管理，也提供了聊天界面，开发者可方便的将客服功能集成到自己的 APP 中。iOS SDK 支持 iOS 8 以上版本，同时支持iPhone、iPad。在iOS 9.2 以上版本中支持 IPv6，能正常通过苹果审核。
+微企微上客 iOS SDK 是客服系统访客端的解决方案，既包含了客服聊天逻辑管理，也提供了聊天界面，开发者可方便的将客服功能集成到自己的 APP 中。iOS SDK 支持 iOS 8 以上版本，同时支持iPhone、iPad以及横竖屏UI。在iOS 9.2 以上版本中支持 IPv6，能正常通过苹果审核。
 
 ## SDK 目录讲解
  下载完 微上客 SDK，得到如下两部分：
@@ -9,7 +9,7 @@
  * WSKChatSDK.framework：静态库Framework,包含静态库文件和SDK的头文件
  * WSKResource.bundle：SDK的资源文件包
  
- >由于 SDK 是静态库，且为了方便开发者使用，我们将 i386 x86_64 armv7 arm64 平台的静态库合并成一个 Fat Library ，导致整个 SDK 比较大。但实际编译后大约只会增加 app 2-3M 大小
+ >由于 SDK 是静态库，且为了方便开发者使用，我们将 i386、x86_64、armv7、arm64 平台的静态库合并成一个 Fat Library ，导致整个 SDK 比较大。但实际编译后大约只会增加 app 2-3M 大小
 
 ## 系统要求以及依赖第三方框架
 * 系统要求  
@@ -196,6 +196,16 @@ WSKUIConfig 只是负责替换部分皮肤相关内容，不包含所有的图�
 	 *  客服文本消息字体颜色
 	 */
     [[WSKSDK sharedSDK] customUIConfig].serviceMessageTextColor = [UIColor blackColor];
+    
+    /**
+	 *  客户文本消息内嵌链接字体颜色
+	 */
+	[[WSKSDK sharedSDK] customUIConfig].customMessageLinkTextColor = [UIColor colorWithRed:128.0/255.0 green:233.0/255.0 blue:255.0/255.0 alpha:1.0];
+	
+	/**
+	 *  客服文本消息内嵌链接字体颜色
+	 */
+	[[WSKSDK sharedSDK] customUIConfig].serviceMessageLinkTextColor = [UIColor colorWithRed:0.0/255.0 green:165.0/255.0 blue:224.0/255.0 alpha:1.0];
     
     /**
  	 *  提示文本消息字体颜色

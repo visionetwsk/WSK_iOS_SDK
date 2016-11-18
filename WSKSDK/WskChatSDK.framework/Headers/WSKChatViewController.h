@@ -29,5 +29,6 @@ typedef void (^RefreshSessionBlock)(void);
 @property (nonatomic,strong) NSMutableArray *arySenderAudioIcon;         //用于播放时动态显示
 
 - (void)postPasteImageOperate;
+- (void)touchTableView;
 
 @end

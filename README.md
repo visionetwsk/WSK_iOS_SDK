@@ -35,7 +35,7 @@
 	* UserNotifications.framework
 	* libstdc++.6.0.9.tbd
 
-* 添加第三方库：在Podfile中添加Socket.IO的依赖， pod 'Socket.IO-Client-Swift', '~> 8.0.2'
+* 添加第三方库：在Podfile中添加Socket.IO的依赖， pod 'Socket.IO-Client-Swift', '~> 8.1.2'
 
 * 在 Build Settings -> Other Linker Flags 中添加 -ObjC 
 

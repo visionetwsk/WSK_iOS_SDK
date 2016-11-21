@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.libraries = 'stdc++.6.0.9'
 
   s.requires_arc = true
-  s.dependency 'Socket.IO-Client-Swift', '~> 8.0.2'
+  s.dependency 'Socket.IO-Client-Swift', '~> 8.1.2'
 
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   

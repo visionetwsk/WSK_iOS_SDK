@@ -44,7 +44,7 @@
 在 Podfile 文件中加入 
 
 ```
-	pod 'WSK_iOS_SDK', '~> 0.0.2'
+	pod 'WSK_iOS_SDK', '~> 0.0.3'
 ```
 > 推荐使用CocoaPods集成，因为只需在Podfile中加入上面一句即可
 

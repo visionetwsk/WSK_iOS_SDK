@@ -104,8 +104,11 @@ end
 	注销：
 		- (void)logout:(WSKCompletionBlock)completion;
 
-	设置用户信息
+	设置用户信息：
 		- (void)setUserInfo:(WSKUserVo *)userVo;
+
+	设置调试模式获取更多的Log信息，发布应用时建议不开启，用于节省性能开销：
+		- (void)setDebugMode;
 		
 ```
 
@@ -242,6 +245,11 @@ WSKUIConfig 只是负责替换部分皮肤相关内容，不包含所有的图�
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chat_bg"]];
     imageView.contentMode = UIViewContentModeScaleToFill;
     [[WSKSDK sharedSDK] customUIConfig].chatBackground = imageView;
+    
+   /**
+ 	 *  客户头像URL,优先使用URL加载图片
+ 	 */
+    [[WSKSDK sharedSDK] customUIConfig].customerHeadURL = [NSURL URLWithString:@"http://visionet.findest.com/letsdesk/assets/img/logo-1.png"];
     
 	/**
 	 *  客户头像

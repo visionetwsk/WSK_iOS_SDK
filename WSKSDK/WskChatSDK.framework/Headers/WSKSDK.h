@@ -71,4 +71,9 @@ typedef void(^WSKCompletionBlock)();
  */
 - (void)setUserInfo:(WSKUserVo *)userVo;
 
+/**
+ *  setDebugMode获取更多的Log信息
+ */
+- (void)setDebugMode;
+
 @end

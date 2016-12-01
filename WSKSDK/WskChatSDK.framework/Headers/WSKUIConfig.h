@@ -64,6 +64,11 @@
 @property (nonatomic, strong) UIImageView *chatBackground;
 
 /**
+ *  客户头像URL,优先使用URL加载图片
+ */
+@property (nonatomic, strong) NSURL *customerHeadURL;
+
+/**
  *  客户头像
  */
 @property (nonatomic, strong) UIImage *customerHeadImage;

@@ -72,7 +72,7 @@ typedef void(^WSKCompletionBlock)();
 - (void)setUserInfo:(WSKUserVo *)userVo;
 
 /**
- *  setDebugMode获取更多的Log信息
+ *  设置调试模式获取更多的Log信息，发布应用时建议不开启，用于节省性能开销
  */
 - (void)setDebugMode;
 

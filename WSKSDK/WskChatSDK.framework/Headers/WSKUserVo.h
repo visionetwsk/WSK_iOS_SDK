@@ -12,6 +12,7 @@
 
 @property(nonatomic,strong)NSString *userID;                //用户ID,客户openId
 @property(nonatomic,strong)NSString *userName;              //用户真实姓名或别名
+@property(nonatomic,strong)NSString *headerImageURL;            //用户头像
 @property(nonatomic)NSInteger gender;                       //性别，1：男、2：女
 @property(nonatomic,strong)NSString *phoneNumber;           //手机
 @property(nonatomic,strong)NSString *telephone;             //固定电话

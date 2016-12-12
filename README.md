@@ -48,7 +48,7 @@ platform :ios, '8.0'
 use_frameworks!		#必须加入这一句，因为有依赖swift库
 
 target 'YourApp' do
-    pod 'WSK_iOS_SDK', '~> 0.0.5' 
+    pod 'WSK_iOS_SDK', '~> 0.0.6' 
 end
 ```
 > 推荐使用CocoaPods集成，在Podfile中加入 WSK\_iOS\_SDK 的引用即可
@@ -138,7 +138,19 @@ appKey 可以通过公司管理员账号登录 “微上客Web端” -> “设�
 	WSKUserVo *userVo = [[WSKUserVo alloc]init];
 	userVo.strUserID = @"45471429666";
 	userVo.strUserName = @"iOS_SDK_用户1";
+	userVo.headerImageURL = @"http://visionet.findest.com/letsdesk/assets/img/logo-1.png";  //用户头像
+    userVo.gender = 1;  //性别,1：男、2：女
+    userVo.phoneNumber = @"18611111111";  //手机
+    userVo.telephone = @"021-12345678";  //固定电话
+    userVo.email = @"71232131@qq.com";  //邮箱
+    
+    userVo.address = @"上海市长宁区";  //地址
+    userVo.position = @"人事经理";  //职位
+    userVo.department = @"人事部";  //单位
+    userVo.birthday = @"1988-12-12";  //生日(yyyy-MM-dd)
+    userVo.remark = @"备注SDK";  //备注
 	[[WSKSDK sharedSDK] setUserInfo:userVo];
+
 ```
 
 ### 集成客户聊天组件

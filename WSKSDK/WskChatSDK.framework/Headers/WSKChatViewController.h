@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WSKCommodityVo.h"
 
 //定义返回刷新Block类型
 typedef void (^RefreshSessionBlock)(void);
@@ -22,6 +23,11 @@ typedef void (^RefreshSessionBlock)(void);
  *  会话窗口标题
  */
 @property (nonatomic,strong) NSString *chatTitle;
+
+/**
+ *  商品信息展示
+ */
+@property (nonatomic, strong) WSKCommodityVo *commodityVo;
 
 @property (nonatomic,strong) WSKFaceToolBar *faceToolBar;
 @property (nonatomic,strong) NSMutableArray *aryImageURL;                //聊天的图片列表

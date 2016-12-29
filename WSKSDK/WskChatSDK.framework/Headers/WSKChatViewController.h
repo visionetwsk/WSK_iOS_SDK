@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "WSKCommodityVo.h"
 
-//定义返回刷新Block类型
-typedef void (^RefreshSessionBlock)(void);
+/**
+ *  提供了监控SDK内消息跳转行为的block;
+ *  如果设置了block回调，则在链接点击之后执行该block
+ *
+ *  @return 是否执行SDK默认的跳转行为
+ *  如果block返回为NO,则不执行SDK默认处理, 返回为YES则执行SDK默认跳转处理
+ */
+typedef BOOL (^WSKLinkClickBlock)(NSString *linkAddress);
 
 @class WSKFaceToolBar;
 
@@ -22,17 +28,24 @@ typedef void (^RefreshSessionBlock)(void);
 /**
  *  会话窗口标题
  */
-@property (nonatomic,strong) NSString *chatTitle;
+@property (nonatomic, strong) NSString *chatTitle;
 
 /**
  *  商品信息展示
  */
 @property (nonatomic, strong) WSKCommodityVo *commodityVo;
 
-@property (nonatomic,strong) WSKFaceToolBar *faceToolBar;
-@property (nonatomic,strong) NSMutableArray *aryImageURL;                //聊天的图片列表
-@property (nonatomic,strong) NSMutableArray *aryReceiverAudioIcon;       //用于播放时动态显示
-@property (nonatomic,strong) NSMutableArray *arySenderAudioIcon;         //用于播放时动态显示
+/**
+ *  监控SDK内消息跳转行为的block
+ *
+ *  @return 是否执行SDK默认的跳转行为
+ */
+@property (nonatomic, copy) WSKLinkClickBlock linkClickBlock;
+
+@property (nonatomic, strong) WSKFaceToolBar *faceToolBar;
+@property (nonatomic, strong) NSMutableArray *aryImageURL;                //聊天的图片列表
+@property (nonatomic, strong) NSMutableArray *aryReceiverAudioIcon;       //用于播放时动态显示
+@property (nonatomic, strong) NSMutableArray *arySenderAudioIcon;         //用于播放时动态显示
 
 - (void)postPasteImageOperate;
 - (void)touchTableView;

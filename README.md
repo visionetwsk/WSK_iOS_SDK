@@ -48,7 +48,7 @@ platform :ios, '8.0'
 use_frameworks!		#必须加入这一句，因为有依赖swift库
 
 target 'YourApp' do
-    pod 'WSK_iOS_SDK', '~> 0.0.7' 
+    pod 'WSK_iOS_SDK', '~> 0.0.8' 
 end
 ```
 > 推荐使用CocoaPods集成，在Podfile中加入 WSK\_iOS\_SDK 的引用即可
@@ -190,8 +190,7 @@ appKey 可以通过公司管理员账号登录 “微上客Web端” -> “设�
     								target:self action:@selector(onBack:)];
 ```
 
-“onBack” 的样例：
-
+“onBack” 的样例：  
 ```objc
 - (void)onBack:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -200,7 +199,51 @@ appKey 可以通过公司管理员账号登录 “微上客Web端” -> “设�
     								
 如果您的代码要求所有viewController继承某个公共基类，并且公共基类对UINavigationController统一做了某些处理；或者其他原因导致使用第一种方式集成会有问题；这些情况下，建议您使用第二种方式集成。
 
-### 自定义访客端聊天组件UI效果
+### 监控SDK内的链接跳转动作
+在WSKChatViewController控制器中设置链接跳转的监听block即可     
+如果block返回为NO,则不执行SDK默认处理.如果block返回为YES则执行SDK默认跳转处理：   
+
+```objc
+/**
+ *  提供了监控SDK内消息跳转行为的block;
+ *  如果设置了block回调，则在链接点击之后执行该block
+ *  如果block返回为NO,则不执行SDK默认处理.如果block返回为YES则执行SDK默认跳转处理
+ */
+typedef BOOL (^WSKLinkClickBlock)(NSString *linkAddress);
+
+@interface WSKChatViewController : UIViewController
+
+...
+
+/**
+ *  监控SDK内消息跳转行为的block
+ *
+ *  @return 是否执行SDK默认的跳转行为
+ */
+@property (nonatomic, copy) WSKLinkClickBlock linkClickBlock;
+
+...
+
+@end
+
+```
+
+参考代码：  
+
+```objc
+//启动聊天界面
+WSKChatViewController *chatViewController = [[WSKSDK sharedSDK] chatViewController];
+chatViewController.chatTitle = @"微上客SDK测试";
+//设置回调
+chatViewController.linkClickBlock = ^(NSString *urlString) {
+    ViewController2 *viewController2 = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ViewController2"];
+    [self.navigationController pushViewController:viewController2 animated:YES];
+    return NO;
+};
+
+```
+
+### 自定义客户端聊天组件UI效果
 
 获取自定义UI类对象
 

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name     = 'WSK_iOS_SDK'
-  s.version  = '0.0.7'
+  s.version  = '0.0.8'
   s.license  = { :"type" => "Copyright",
                  :"text" => " Copyright 2016 Visionet \n"}
   s.homepage = 'http://visionet.findest.com/letsdesk/'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target  = '8.0'
 
-  s.source   = { :git => 'https://github.com/visionetwsk/WSK_iOS_SDK.git', :tag => "0.0.7" }
+  s.source   = { :git => 'https://github.com/visionetwsk/WSK_iOS_SDK.git', :tag => "0.0.8" }
   s.resource  = ['WSKSDK/WSKResource.bundle']
   s.vendored_frameworks = 'WSKSDK/*.{framework}'
   
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.libraries = 'stdc++.6.0.9'
 
   s.requires_arc = true
-  s.dependency 'Socket.IO-Client-Swift', '8.1.2'
+  s.dependency 'Socket.IO-Client-Swift', '8.2.0'
 
   s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
   

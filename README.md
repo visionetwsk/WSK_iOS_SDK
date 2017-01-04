@@ -136,8 +136,8 @@ appKey 可以通过公司管理员账号登录 “微上客Web端” -> “设�
 
 ```objc
 	WSKUserVo *userVo = [[WSKUserVo alloc]init];
-	userVo.strUserID = @"45471429666";
-	userVo.strUserName = @"iOS_SDK_用户1";
+	userVo.userID = @"45471429666";
+	userVo.userName = @"iOS_SDK_用户1";
 	userVo.headerImageURL = @"http://visionet.findest.com/letsdesk/assets/img/logo-1.png";  //用户头像
     userVo.gender = 1;  //性别,1：男、2：女
     userVo.phoneNumber = @"18611111111";  //手机

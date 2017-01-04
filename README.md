@@ -48,7 +48,7 @@ platform :ios, '8.0'
 use_frameworks!		#必须加入这一句，因为有依赖swift库
 
 target 'YourApp' do
-    pod 'WSK_iOS_SDK', '~> 0.0.9' 
+    pod 'WSK_iOS_SDK', '~> 1.0.0' 
 end
 ```
 > 推荐使用CocoaPods集成，在Podfile中加入 WSK\_iOS\_SDK 的引用即可

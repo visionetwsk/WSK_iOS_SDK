@@ -456,4 +456,4 @@ WSKUIConfig 只是负责替换部分皮肤相关内容，不包含所有的图�
 源码充分的展示了 iOS SDK 的能力，并且为集成 iOS SDK 提供了样例代码。
 
 
-
+![WSK_SDK_iOS](https://raw.githubusercontent.com/visionetwsk/Resource/master/image/wsk7.png)

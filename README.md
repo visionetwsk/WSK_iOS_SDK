@@ -127,8 +127,7 @@ end
 	    return YES;
 	}
 ```
-appKey 可以通过公司管理员账号登录 “微上客Web端” -> “配置” -> “App Sdk设置” -> “App Key：渠道appKey” 找到, appName对应添加一个 app 时填写的 App 名称。   
-> 注意要先在 “微上客Web端” -> “配置” -> “渠道管理” 添加移动端渠道。
+appKey 可以通过公司管理员账号登录 “微上客Web端” -> “配置” -> “App Sdk设置” -> “App Key：渠道appKey” 找到, appName对应添加一个 app 时填写的 App 名称， 详细步骤请参见 [新建App和上传证书](https://github.com/visionetwsk/WSK_iOS_SDK/wiki/%E6%96%B0%E5%BB%BAApp%E5%92%8C%E4%B8%8A%E4%BC%A0%E8%AF%81%E4%B9%A6 "target=_blank")  
 
 
 ### 设置用户信息

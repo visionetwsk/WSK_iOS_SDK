@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version  = '1.0.3'
   s.license  = { :"type" => "Copyright",
                  :"text" => " Copyright 2016 Visionet \n"}
-  s.homepage = 'http://visionet.findest.com/letsdesk/'
+  s.homepage = 'http://weisk.com/'
   s.author   = { 'sunyan' => 'sunyan@visionet.com.cn' }
   s.summary  = '微企微上客客服访客端 iOS SDK'
   

@@ -3,6 +3,9 @@
 
 微企微上客 iOS SDK 是客服系统访客端的解决方案，既包含了客服聊天逻辑管理，也提供了聊天界面，开发者可方便的将客服功能集成到自己的 APP 中。iOS SDK 支持 iOS 8 以上版本，同时支持iPhone、iPad以及横竖屏UI。在iOS 9.2 以上版本中支持 IPv6，能正常通过苹果审核。
 
+[![Cocoapods Platform](https://img.shields.io/cocoapods/v/WSK_iOS_SDK.svg?style=flat)](http://cocoadocs.org/docsets/WSK_iOS_SDK/)
+[![Cocoapods Version](https://img.shields.io/cocoapods/p/WSK_iOS_SDK.svg?style=flat)](http://cocoadocs.org/docsets/WSK_iOS_SDK/)
+
 ## SDK 目录讲解
  下载完 微上客 SDK，得到如下两部分：
  

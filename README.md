@@ -23,6 +23,20 @@
 
 ## SDK 集成和配置
 
+### CocoaPods集成
+
+在 Podfile 文件中加入  ```pod 'WSK_iOS_SDK'```
+
+```
+platform :ios, '8.0'      
+use_frameworks!		#必须加入这一句，因为有依赖swift库
+
+target 'YourApp' do
+    pod 'WSK_iOS_SDK' 
+end
+```
+> 推荐使用CocoaPods集成，在Podfile中加入 WSK\_iOS\_SDK 的引用即可
+
 ### 手动集成
 
 * 下载 微上客 SDK，得到一个 WSKChatSDK.framework 文件、 WSKResource.bundle 文件夹，将他们导入工程
@@ -41,20 +55,6 @@
 * 添加第三方库：在Podfile中添加Socket.IO的依赖， pod 'Socket.IO-Client-Swift', '~> 8.1.2'
 
 * 在 Build Settings -> Other Linker Flags 中添加 -ObjC 
-
-### CocoaPods集成
-
-在 Podfile 文件中加入  ```pod 'WSK_iOS_SDK'```
-
-```
-platform :ios, '8.0'      
-use_frameworks!		#必须加入这一句，因为有依赖swift库
-
-target 'YourApp' do
-    pod 'WSK_iOS_SDK' 
-end
-```
-> 推荐使用CocoaPods集成，在Podfile中加入 WSK\_iOS\_SDK 的引用即可
 
 ### 配置工程
 

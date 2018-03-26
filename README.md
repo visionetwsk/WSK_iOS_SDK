@@ -16,7 +16,7 @@
 
 ## 系统要求以及依赖第三方框架
 * 系统要求  
-该项目最低支持 iOS 8.0 和 Xcode 8.0。
+该项目最低支持 iOS 8.0 和 Xcode 9.0。
 
 * 依赖第三方框架  
 微上客SDK 依赖 [Socket.IO-Client-Swift](https://github.com/socketio/socket.io-client-swift) 库，如果选择手动集成微上客SDK则需要用CocoaPods引入Socket.IO库，选择CocoaPods集成则不需要手动添加依赖处理。
@@ -52,7 +52,7 @@ end
 	* UserNotifications.framework
 	* libstdc++.6.0.9.tbd
 
-* 添加第三方库：在Podfile中添加Socket.IO的依赖， pod 'Socket.IO-Client-Swift', '~> 8.1.2'
+* 添加第三方库：在Podfile中添加Socket.IO的依赖， pod 'Socket.IO-Client-Swift', '~> 13.1.2'
 
 * 在 Build Settings -> Other Linker Flags 中添加 -ObjC 
 

@@ -14,7 +14,7 @@
 /**
  *  完成回调
  */
-typedef void(^WSKCompletionBlock)();
+typedef void(^WSKCompletionBlock)(void);
 
 /**
  *  所有SDK接口都从此类获得

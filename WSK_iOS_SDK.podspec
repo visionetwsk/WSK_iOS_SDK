@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name     = 'WSK_iOS_SDK'
-  s.version  = '1.0.5'
+  s.version  = '1.0.6'
   s.license  = { :"type" => "Copyright",
                  :"text" => " Copyright 2018 Visionet \n"}
   s.homepage = 'http://weisk.com/'
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target  = '8.0'
 
-  s.source   = { :git => 'https://github.com/visionetwsk/WSK_iOS_SDK.git', :tag => "1.0.5" }
+  s.source   = { :git => 'https://github.com/visionetwsk/WSK_iOS_SDK.git', :tag => "1.0.6" }
   s.resource  = ['WSKSDK/WSKResource.bundle']
   s.vendored_frameworks = 'WSKSDK/*.{framework}'
   
